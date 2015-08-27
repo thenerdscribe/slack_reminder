@@ -79,8 +79,7 @@ class reminders
 	
 	public function addReminder($reminder)
 	{
-		$data = array($reminder);
-		$id = $this->db->insert('reminders', $data);
+		$id = $this->db->insert('reminders', $reminder);
 		
 		if ($id) {
 			echo $reminder . ' has been added<br>';
